@@ -5,7 +5,6 @@ public class AccountpanException {
         try{
 
         }catch (Exception e){
-
-        }
+            System.out.println(" Exception occured");       }
     }
 }
