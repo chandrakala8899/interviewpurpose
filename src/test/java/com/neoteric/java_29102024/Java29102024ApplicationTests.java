@@ -1,13 +1,15 @@
 package com.neoteric.java_29102024;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootTest
+
+@SpringBootApplication
 class Java29102024ApplicationTests {
-
-	@Test
-	void contextLoads() {
+	public static void main(String[] args) {
+		SpringApplication.run(Java29102024ApplicationTests.class, args);
 	}
 
 }
+

@@ -1,9 +1,15 @@
 package com.neoteric.java_29102024.ticket;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class TicketCancellationService implements TicketCancellation {
 
+    Logger logger = LogManager.getLogger(TicketCancellationService.class);
     @Override
     public double cancelTicket(int hoursAfterTicketBooking, double ticketPrice) {
+
+        logger.info("TicketCancellationService:cancelTicket execution started ..");
         double accountBalance = 5000.0;
         double cancellationFeePercentage;
 
@@ -15,6 +21,7 @@ public class TicketCancellationService implements TicketCancellation {
             cancellationFeePercentage = CancellationPolicy.WITHIN_4_HOURS.getCancellationFeePercentage();
         } else {
             cancellationFeePercentage = CancellationPolicy.WITHIN_2_HOURS.getCancellationFeePercentage();
+            logger.info("TicketCancellationService:cancelTicket execution ended ..");
         }
 
         double cancellationFee = ticketPrice * cancellationFeePercentage;

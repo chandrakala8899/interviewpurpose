@@ -1,0 +1,28 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration>-->
+<!--    <Appenders>-->
+<!--        <Console name="console" target="SYSTEM_OUT">-->
+<!--            <PatternLayout-->
+<!--                    pattern="%style{%d{ISO8601}} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{10}}{bright,yellow}: %msg%n%throwable" />-->
+<!--        </Console>-->
+<!--        <SplunkHttp-->
+<!--                name="splunkhttp"-->
+<!--                url="http://localhost:8088"-->
+<!--                token="3827a3ba-24bd-462f-862c-1cc8a214d8e9"-->
+<!--                host="localhost"-->
+<!--                index="ticket_api"-->
+<!--                type="raw"-->
+<!--                source="http-event-logs"-->
+<!--                sourcetype="log4j"-->
+<!--                messageFormat="text"-->
+<!--                disableCertificateValidation="true">-->
+<!--            <PatternLayout pattern="%m" />-->
+<!--        </SplunkHttp>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        <Root level="info">-->
+<!--            <AppenderRef ref="console" />-->
+<!--            <AppenderRef ref="splunkhttp" />-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->
