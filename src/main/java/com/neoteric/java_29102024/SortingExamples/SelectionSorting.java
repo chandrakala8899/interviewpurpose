@@ -5,16 +5,10 @@ import java.util.Arrays;
 public class SelectionSorting {
     public  static void main (String args[]){
         int [] scores = {20,30,10,50};
-
-
-
         System.out.println(" before sorting " + Arrays.toString(scores));
         selectionSorted(scores); // Ascending order
         System.out.println("  After Sorting " + Arrays.toString(scores));
-
-
-    }
-    public static void  selectionSorted(int [] arr){
+    }public static void  selectionSorted(int [] arr){
   int n = arr.length;
 
         // Iterate through the array

@@ -13,5 +13,4 @@ public enum BookingStatus {
     public String getMessage() {
         return message;
     }
-
 }

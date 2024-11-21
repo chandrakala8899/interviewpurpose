@@ -26,7 +26,7 @@ public class ProductServiceUsingLinkedList {
         int endIndex=linkedList.size();
 
 
-// using for loop
+        // using for loop
         for(startIndex=0;startIndex<endIndex;startIndex++){
           Product currentProduct = linkedList.get(startIndex);
          logger.info( "using normal forloop"+currentProduct.getName().hashCode());

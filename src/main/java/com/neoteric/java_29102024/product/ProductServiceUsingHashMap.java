@@ -46,13 +46,19 @@ public class ProductServiceUsingHashMap {
 
     //Using Iterator
 
-     Set<Map.Entry<Integer,Product>> entryset =  productHashMap.entrySet();
-      Iterator<Map.Entry<Integer,Product>> entry = entryset.iterator();
-        for(;entry.hasNext();){
-            Map.Entry<Integer,Product> entrymap = entry.next();
+        Predicate<Map.Entry<Integer, Product>> productPredicate1 = entry -> entry.getValue().getName().contains("key");
+
+        // Get the entry set and iterate
+        Set<Map.Entry<Integer, Product>> entryset = productHashMap.entrySet();
+        Iterator<Map.Entry<Integer, Product>> entry = entryset.iterator();
+
+        for(;entry.hasNext();) {
+            Map.Entry<Integer, Product> entrymap = entry.next();
+            if (productPredicate1.test(entrymap)) {
+                logger.info(entrymap.getKey()+ " -> " + entrymap.getValue());
+            }
           logger.info("Iterator " + entrymap.hashCode());
         }
-
 
          // using Streams
 
