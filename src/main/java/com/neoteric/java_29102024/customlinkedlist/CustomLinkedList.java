@@ -2,7 +2,6 @@ package com.neoteric.java_29102024.customlinkedlist;
 
 class CustomLinkedList {
 
-    // Node class representing an element in the list
     static class Node {
         int data;     // Value of the node
         Node next;    // Pointer to the next node
