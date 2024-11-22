@@ -1,4 +1,4 @@
-package com.neoteric.java_29102024.product;
+package com.neoteric.java_29102024.collectionpractice;
 
 public  class Product implements  Comparable<Product> {
     private  int productId;

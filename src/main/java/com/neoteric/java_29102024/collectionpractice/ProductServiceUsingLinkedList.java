@@ -1,4 +1,4 @@
-package com.neoteric.java_29102024.product;
+package com.neoteric.java_29102024.collectionpractice;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,8 +62,6 @@ public class ProductServiceUsingLinkedList {
               logger.info(" matching product Keyboard with ProductId" + product.getName()));
 
            logger.info(" matching product" + linkedList.stream().filter(productPredicate).count());  // count
-
-
     }
 }
 

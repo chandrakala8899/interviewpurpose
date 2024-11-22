@@ -1,4 +1,4 @@
-package com.neoteric.java_29102024.product;
+package com.neoteric.java_29102024.collectionpractice;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -82,19 +82,17 @@ public class ProductServiceUsingHashMap {
 
         }
 
-        TreeMap<Product,Integer> sortedMap2 = new TreeMap<Product,Integer>();
+        TreeMap<Product,Integer> sortedMap2 = new TreeMap<>();
         logger.info(" sorted keys ");
         sortedMap2.put(product1,4);
         sortedMap2.put(product2,3);
         sortedMap2.put(product3,2);
         sortedMap2.put(product4,1);
 
-
-
       Iterator <Map.Entry<Product,Integer>> treeMapIterator1 =  sortedMap2.entrySet().iterator();
       for(;treeMapIterator.hasNext();){
           Map.Entry<Product,Integer> enrty = treeMapIterator1.next();
-          logger.info("  Sorting " +  " Key: "+enrty.getKey() +"Value:  " + enrty.getValue()) ;
+          logger.info("  Tree map Sorting " +  " Key: "+enrty.getKey() +"Value:  " + enrty.getValue()) ;
 
       }
 
