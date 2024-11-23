@@ -1,8 +1,7 @@
 package com.neoteric.java_29102024.enummap;
 
 import java.util.EnumMap;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+
 
 public class EnumMapTest {
     public static void main(String[] args) {
@@ -12,11 +11,11 @@ public class EnumMapTest {
         enumMap.put(AttendenceStatus.ABSENT," No data for absentees yet");
         enumMap.put(AttendenceStatus.ON_LEAVE,"Employees on Leave.");
 
-enumMap.entrySet().stream().forEach(entry ->
+        enumMap.entrySet().stream().forEach(entry ->
                 System.out.println(entry.getKey() + "  value: " + entry.getValue())
         );
 
- enumMap.entrySet().stream().filter(entry ->
+       enumMap.entrySet().stream().filter(entry ->
          entry.getKey() !=AttendenceStatus.ABSENT)
          .forEach(entry -> System.out.println(entry.getKey() + " from filter  :" + entry.getValue())
          );
