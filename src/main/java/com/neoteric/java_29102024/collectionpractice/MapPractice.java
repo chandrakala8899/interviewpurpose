@@ -40,5 +40,7 @@ public class MapPractice {
 
         sortedMarks.entrySet().stream().forEach(entry3->
                 logger.info(" sorted using Tree Map " +entry3.getKey() + "value: " +entry3.getValue()));
+
+
     }
 }
