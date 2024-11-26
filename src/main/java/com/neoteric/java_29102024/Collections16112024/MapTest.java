@@ -31,8 +31,8 @@ public class MapTest {
         String s2 = new String("geetha");
 
         System.out.println(s1.hashCode() + "   "+s2.hashCode());
-        System.out.println(s1.equals(s3));
-        System.out.println(s1==s3);
+        System.out.println(s1.equals(s3));  // compare inside data it will
+        System.out.println(s1==s3);   // compare references
 
 
         System.out.println(linkedDifferHashMap1.getName()+" LinkedListHashcode hashcode");
