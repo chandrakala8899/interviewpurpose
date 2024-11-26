@@ -1,12 +1,19 @@
 package com.neoteric.java_29102024.company;
 
 
-import java.util.Comparator;
-
 public class Employee implements Comparable<Employee>{
     private  String EmployeeName;
     private  int employeeId;
     private  double salary;
+    private String department;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 
     public int getEmployeeId() {
         return employeeId;
