@@ -81,11 +81,11 @@ public class CompanyTest {
 
 
 
-        Optional<Employee> companyMaxSalaryEmployee1 = departments.stream()
+        Optional<Employee> companyminSalaryEmployee1 = departments.stream()
                 .flatMap(department -> department.getEmployeeList().stream())
                 .min((o1, o2) -> o1.compareTo(o2));   //  company Max salary
 
-        companyMaxSalaryEmployee1.ifPresent(employee ->
+        companyminSalaryEmployee1.ifPresent(employee ->
                 System.out.println("Company minimum  Salary: " + employee));
 
         // Calculate department-wise maximum salary using Comparable
