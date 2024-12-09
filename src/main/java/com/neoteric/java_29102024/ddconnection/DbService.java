@@ -13,6 +13,10 @@ public class DbService {
         String password = "sonar";
 
         List<Project> projects = new ArrayList<>();
+        Map<String,List<Project>>  projectmap =  new HashMap<>();
+
+
+
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,28 +40,28 @@ public class DbService {
                                 .findFirst()
                                 .orElseGet(() -> {
                                     Project newProject = null;
-                                    try {
-                                        newProject = new Project(
-                                                projectId,
-                                                projectName,
-                                                resultSet.getDate("startdate"),
-                                                resultSet.getDate("enddate"),
-                                                new ArrayList<>()
-                                        );
-                                    } catch (SQLException e) {
-                                        throw new RuntimeException(e);
-                                    }
+//                                    try {
+//                                        newProject = new Project(
+//                                                projectId,
+//                                                projectName,
+//                                                resultSet.getDate("startdate"),
+//                                                resultSet.getDate("enddate"),
+//                                                new ArrayList<>()
+//                                        );
+//                                    } catch (SQLException e) {
+//                                        throw new RuntimeException(e);
+//                                    }
                                     projects.add(newProject);
                                     return newProject;
                                 });
 
-                        project.getEmployeeList().add(new Employee(
-                                resultSet.getInt("id"),
-                                projectId,
-                                resultSet.getString("name"),
-                                resultSet.getString("dept"),
-                                resultSet.getDouble("salary")
-                        ));
+//                        project.getEmployeeList().add(new Employee(
+//                                resultSet.getInt("id"),
+//                                projectId,
+//                                resultSet.getString("name"),
+//                                resultSet.getString("dept"),
+//                                resultSet.getDouble("salary")
+//                        ));
                     }
                     projects.forEach(project -> {
                         System.out.println("Project: " + project.getPname());
@@ -102,8 +106,6 @@ public class DbService {
 
 
                     System.out.println("Department Average Salary: " + departmentAverageSalary);
-
-
                 }
             }
 

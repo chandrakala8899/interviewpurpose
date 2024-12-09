@@ -31,13 +31,13 @@ public class Project {
         return pname;
     }
 
-    public Project(int id, String pname, Date startdate, Date enddate, List<Employee> employeeList) {
-        this.id = id;
-        this.pname = pname;
-        this.startdate = startdate;
-        this.enddate = enddate;
-        this.employeeList = employeeList;
-    }
+//    public Project(int id, String pname, Date startdate, Date enddate, List<Employee> employeeList) {
+//        this.id = id;
+//        this.pname = pname;
+//        this.startdate = startdate;
+//        this.enddate = enddate;
+//        this.employeeList = employeeList;
+//    }
 
     public void setPname(String pname) {
         this.pname = pname;

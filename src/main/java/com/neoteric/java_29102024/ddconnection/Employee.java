@@ -8,13 +8,13 @@ public class Employee {
     private String dept;
     private Double salary;
 
-    public Employee(int id, int pid, String name, String dept, Double salary) {
-        this.id = id;
-        this.pid = pid;
-        this.name = name;
-        this.dept = dept;
-        this.salary = salary;
-    }
+//    public Employee(int id, int pid, String name, String dept, Double salary) {
+//        this.id = id;
+//        this.pid = pid;
+//        this.name = name;
+//        this.dept = dept;
+//        this.salary = salary;
+//    }
 
     public int getId() {
         return id;
